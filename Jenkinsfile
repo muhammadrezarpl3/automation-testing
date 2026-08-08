@@ -22,8 +22,9 @@ pipeline {
             }
         }
         post {
-             always {
-                junit 'test-results.xml'
+              always {
+                   junit 'test-results.xml'
+                         archiveArtifacts artifacts: 'pytest-report.html', allowEmptyArchive: true
              }
         }
 }
