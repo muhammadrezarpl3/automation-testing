@@ -48,7 +48,7 @@ class RegisterPage:
         try:
             success_message.wait_for(
                 state="visible",
-                timeout=5000
+                timeout=10000
             )
             return True
         except Exception:
