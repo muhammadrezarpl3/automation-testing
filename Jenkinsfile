@@ -20,5 +20,11 @@ pipeline {
                 bat 'python -m pytest -v --junitxml=test-results.xml'
             }
         }
+
+        post {
+             always {
+                junit 'test-results.xml'
+             }
+        }
     }
 }
