@@ -16,8 +16,8 @@ pipeline {
         }
 
         stage('Run Tests') {
-            steps {
-                bat 'python -m pytest -v --junitxml=test-results.xml'
+             steps {
+                  bat 'python -m pytest -v --junitxml=test-results.xml --html=pytest-report.html --self-contained-html'
                 }
             }
         }
