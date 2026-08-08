@@ -1,2 +1,6 @@
 [pytest]
 testpaths = tests
+
+playwright
+pytest
+pytest-bdd
